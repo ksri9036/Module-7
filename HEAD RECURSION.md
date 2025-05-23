@@ -16,9 +16,24 @@ To write a Python program to demonstrate **Head Recursion** by finding and print
 7. **Stop**
 
 ## 💻 PROGRAM:
+```
+def sum_digits(n):
+    return sum(int(d) for d in str(n))
 
-ADD CODE HERE
+def fun(n):
+    if n <= 0:
+        return
+    fun(n - 2)  # Head recursion
+    print(f"{n} → {sum_digits(n)}")
 
+num = int(input("Enter a number: "))
+if num % 2 != 0:
+    num += 1
+fun(num)
+
+```
 ## OUTPUT
+![442046373-7f31d53c-609f-4900-9b9b-a8806ae82db9](https://github.com/user-attachments/assets/a8dbe324-8d08-498f-a70d-03005b7f85f8)
 
 ## RESULT
+Program executed successfully.
